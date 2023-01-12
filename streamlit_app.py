@@ -15,7 +15,7 @@ def main():
         df = pd.read_csv(file_upload)
         st.write("Data Shape: ", df.shape)
         st.write("Data Columns: ", df.columns)
-        profile = pandas_profiling.ProfileReport(df)
+        profile = pandas_profiling.ProfileReport(df, minimal=True)
         st.write(profile.to_html())
 
 if __name__ == '__main__':
