@@ -13,8 +13,6 @@ def load_data(file):
 
 def main():
     st.title("Data Profiler")
-    st.write("By: A. Vera")
-    st.write("Use this app to generate a quick profile of the data contained in your CSV file.")
 
     # Select the CSV file
     file = st.file_uploader("Upload your CSV file", type="csv")
@@ -27,13 +25,8 @@ def main():
 
     # Display the data profile
     st.write("Data Profile")
-    pr = pandas_profiling.ProfileReport(data)
-#     st.write(profile)
+    profile = pandas_profiling.ProfileReport(data)
+    st.write(profile)
 
-if st.button("Generate Profile Report"):
-    st.write(pr)
-
-#     st_profile_report(pr)
-
-# if __name__== "__main__":
-#     main()
+if __name__== "__main__":
+    main()
