@@ -12,7 +12,6 @@ def load_data(file):
     return pd.read_csv(file)
 
 def main():
-    st.set_page_config(page_title="Data Profiler", page_icon=":chart_with_upwards_trend:", layout="wide")
     st.title("Data Profiler")
     st.write("Use this app to generate a quick profile of the data contained in your CSV file.")
 
