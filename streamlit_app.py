@@ -15,7 +15,7 @@ def main():
         st.write("Data Shape: ", df.shape)
         st.write("Data Columns: ", df.columns)
         profile = pandas_profiling.ProfileReport(df)
-        st.write(profile)
+        st.write(profile.to_html())
 
 if __name__ == '__main__':
     main()
