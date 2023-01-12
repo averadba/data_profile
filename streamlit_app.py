@@ -30,5 +30,5 @@ def main():
     profile = pandas_profiling.ProfileReport(data)
     st.write(profile)
 
-if __name__== "__main__":
-    main()
+# if __name__== "__main__":
+#     main()
