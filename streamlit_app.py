@@ -9,6 +9,7 @@ footer {visibility: hidden;}
 
 def main():
     st.title("Data Profile Generator")
+    st.write("By: A. Vera")
     file_upload = st.file_uploader("Upload a CSV file", type="csv")
     if file_upload is not None:
         df = pd.read_csv(file_upload)
