@@ -13,6 +13,7 @@ def load_data(file):
 
 def main():
     st.title("Data Profiler")
+    st.write("By: A. Vera")
     st.write("Use this app to generate a quick profile of the data contained in your CSV file.")
 
     # Select the CSV file
