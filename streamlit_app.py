@@ -27,8 +27,13 @@ def main():
 
     # Display the data profile
     st.write("Data Profile")
-    profile = pandas_profiling.ProfileReport(data)
-    st.write(profile)
+#     pr = pandas_profiling.ProfileReport(data)
+#     st.write(profile)
+
+if st.button("Generate Profile Report"):
+    pr = df.profile_report()
+
+    st_profile_report(pr)
 
 # if __name__== "__main__":
 #     main()
