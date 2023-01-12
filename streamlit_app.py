@@ -7,26 +7,15 @@ st.markdown(""" <style>
 footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 
-@st.cache
-def load_data(file):
-    return pd.read_csv(file)
-
 def main():
-    st.title("Data Profiler")
+    st.title("Data Profile Generator")
+    file_upload = st.file_uploader("Upload a CSV file", type="csv")
+    if file_upload is not None:
+        df = pd.read_csv(file_upload)
+        st.write("Data Shape: ", df.shape)
+        st.write("Data Columns: ", df.columns)
+        profile = pandas_profiling.ProfileReport(df)
+        st.write(profile)
 
-    # Select the CSV file
-    file = st.file_uploader("Upload your CSV file", type="csv")
-    if file is None:
-        st.error("Please upload a CSV file.")
-        return
-
-    # Load the data
-    data = load_data(file)
-
-    # Display the data profile
-    st.write("Data Profile")
-    profile = pandas_profiling.ProfileReport(data)
-    st.write(profile)
-
-if __name__== "__main__":
+if __name__ == '__main__':
     main()
