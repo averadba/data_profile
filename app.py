@@ -49,7 +49,7 @@ if uploaded_file is not None:
         label="Download Report",
         data=report_html,
         file_name=report_name,
-        mime="text/html"
+        mime="text/html")
         
 else:
     st.info('Please, upload your CSV file when ready.')
