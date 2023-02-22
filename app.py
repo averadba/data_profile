@@ -41,6 +41,16 @@ if uploaded_file is not None:
     st.header('**Data Profile**')
     st_profile_report(pr)
     st.balloons()
+
+ # Add download button
+    report_name = f"{uploaded_file.name}_report.html"
+    report_html = pr.to_html()
+    st.download_button(
+        label="Download Report",
+        data=report_html,
+        file_name=report_name,
+        mime="text/html"
+
 else:
     st.info('Please, upload your CSV file when ready.')
 
