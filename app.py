@@ -50,6 +50,7 @@ if uploaded_file is not None:
         data=report_html,
         file_name=report_name,
         mime="text/html"
-else:
+        
+    else:
     st.info('Please, upload your CSV file when ready.')
 
