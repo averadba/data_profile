@@ -15,7 +15,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown('''
 # **Data Profiler**
 
-*A. Vera*
+*By:* Dr. Alexis Vera - [Contact me](mailto:alexisv@sanjuanbautista.edu)
 
 Use this app to quickly generate a profile report from your input data.  This app uses the  [pandas-profiling](https://pandas-profiling.ydata.ai/docs/master/pages/getting_started/overview.html) library.
 
