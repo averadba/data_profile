@@ -110,7 +110,7 @@ def generate_insights(df: pd.DataFrame, summary: pd.DataFrame) -> list[tuple[str
 # ---------------------------------------------------------------------------
 st.title(":material/analytics: Data profiler")
 st.caption(
-    "By Dr. Alexis Vera - [Contact me](mailto:alexisv@sanjuanbautista.edu). "
+    "By Dr. Alexis Vera - [Contact me](mailto:alexisvera@gmail.com). "
     "Upload a dataset to explore it interactively, get automatic insights, and generate a full "
     "[ydata-profiling](https://docs.profiling.ydata.ai) report."
 )
