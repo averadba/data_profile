@@ -404,7 +404,15 @@ with report_tab:
         st.session_state["report_ready"] = True
 
     if st.session_state.get("report_ready"):
-        report_html = build_profile_html(df, minimal, f"Profile of {dataset_name}")
+        try:
+            report_html = build_profile_html(df, minimal, f"Profile of {dataset_name}")
+        except ImportError as e:
+            st.error(
+                f"ydata-profiling could not be loaded ({e}). Check that `requirements.txt` "
+                "pins `setuptools<81` and reboot the app.",
+                icon=":material/error:",
+            )
+            st.stop()
         st.download_button(
             "Download report (HTML)",
             report_html,
